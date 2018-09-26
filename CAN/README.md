@@ -23,7 +23,7 @@ and the data frame.
 
 Arbitration ID
 --------------
-The arbitration ID is an 11 (or 28) bit identifier that serves as both a message
+The arbitration ID is an 11 (or 29) bit identifier that serves as both a message
 identifier and a sort of priority code. A CAN bus has at least two computers
 communicating on it- often times both have messsages to transmit. Both cannot
 transmit simultaneously, so each begins by transmitting their arbitration ID.
@@ -32,7 +32,7 @@ of how this works aren't super important - read the section 'Data Transmission'
 at the wikipedia link above for details.
 
 For communicating with the Talon SRX, the arbitration ID of the message is of
-the 28 bit format. It consists of 22 bits specifying the "type" of message
+the 29 bit format. It consists of 22 bits specifying the "type" of message
 followed by 6 bits specifying the device ID.
 
 Data Frame
