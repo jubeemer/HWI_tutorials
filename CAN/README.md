@@ -45,10 +45,10 @@ bits correspond to what data.
 
 Here's a small example: imagine a 3 byte (24 bit) CAN message specifying the
 current date. 
-- Bits [lb;4:0]rb; (that notation means bits 4 through 0) are a 5-bit number
+- Bits [4:0] (that notation means bits 4 through 0) are a 5-bit number
   specifying the day.
-- Bits [lb;8:5]rb; are a 4-bit number specifying the day.
-- Bits [lb;21:9]rb; are a 13-bit number specifying the year.
+- Bits [8:5] are a 4-bit number specifying the day.
+- Bits [21:9] are a 13-bit number specifying the year.
 
 Starter Code
 ============
