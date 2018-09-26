@@ -32,8 +32,8 @@ of how this works aren't super important - read the section 'Data Transmission'
 at the wikipedia link above for details.
 
 For communicating with the Talon SRX, the arbitration ID of the message is of
-the 29 bit format. It consists of 22 bits specifying the "type" of message
-followed by 6 bits specifying the device ID.
+the 29 bit format. It consists of 20 bits specifying the "type" of message
+followed by 6 bits specifying the device ID (3 bits are unused).
 
 Data Frame
 ----------
