@@ -46,8 +46,8 @@ bits correspond to what data.
 Here's a small example: imagine a 3 byte (24 bit) CAN message specifying the
 current date. 
 - Bits [4:0] (that notation means bits 4 through 0) are a 5-bit number
-  specifying the day.
-- Bits [8:5] are a 4-bit number specifying the day.
+  specifying the day (1-31).
+- Bits [8:5] are a 4-bit number specifying the month (1-12).
 - Bits [21:9] are a 13-bit number specifying the year.
 
 Starter Code
