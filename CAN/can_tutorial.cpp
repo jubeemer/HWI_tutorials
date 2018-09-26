@@ -65,6 +65,7 @@ int main() {
     date_msg2.arbID = 0x0072A3D9;
     date_msg2.frame = 0x000F9B76;
 
+    // NOTE: Do not hardcode the values! Use bitwise operations.
     uint8_t day2 =  // TODO
     uint8_t month2 = // TODO
     uint16_t year2 = // TODO
