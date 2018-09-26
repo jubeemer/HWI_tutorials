@@ -21,14 +21,15 @@ int main() {
 
     // First, we'll write the arbitration ID. We will follow the format used 
     // for Talon SRXs described in the README.
-    uint32_t msg_type = 0x0072A3D9 // 11100101010001111011001
-    uint8_t device_id = 0x06       // 000110
+    uint32_t msg_type = 0x0072A3D9;
+    uint8_t device_id = 0x06;
 
     // TODO: Set the arbID data member of date_msg1 to the appropriate bit
     // string. The format, as outlined in the README, is 29 bits: 
     // - 6 bits [5:0] are the device ID 
     // - 23 bits [28:6] are the message type.
 
+    // NOTE: Do not hardcode the value! Use bitwise operations.
     uint32_t arbID = // TODO
 
     date_msg1.arbID = arbID;
@@ -50,6 +51,7 @@ int main() {
     uint8_t month1 = // TODO
     uint16_t year1 = // TODO
 
+    // NOTE: Do not hardcode the value! Use bitwise operations.
     uint64_t frame = // TODO
 
     date_msg1.frame = frame;
@@ -60,54 +62,52 @@ int main() {
     // decode the date.
 
     CANMessage date_msg2;
-    date_msg2.arbID = 0x0072A3D9
-    date_msg2.frame = 0x000F9B76
+    date_msg2.arbID = 0x0072A3D9;
+    date_msg2.frame = 0x000F9B76;
 
-    uint8_t day2 = // TODO
+    uint8_t day2 =  // TODO
     uint8_t month2 = // TODO
     uint16_t year2 = // TODO
 
     ///////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////
+    /////////////////////////// SPOILERS BELOW ////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////
-
+    ///////////////////////////////////////////////////////////////////////////
+   
 
     // PART 1 CHECK
     cout << "Checking Part 1 - Arbitration ID..." << endl;
-    if(date_msg1.arbID == 0x1CA8F545)
+    if(date_msg1.arbID == 0x1CA8F646)
         cout << "PASS!" << endl;
     else
         cout << "FAILED - Arbitration ID Incorrect." << endl;
 
     cout << "Checking Part 1 - Data Frame..." << endl;
-    if(date_msg1.frame == 0x000FAF03)
+    if(date_msg1.frame == 0x0FAF03)
         cout << "PASS!" << endl;
     else
-        cout << "FAILED - Data Frame Incorrect."
+        cout << "FAILED - Data Frame Incorrect.";
 
 
     // PART 2 CHECK
     cout << "Checking Part 2 - Day..." << endl;
-    if(day2 == 0x15)
+    if(day2 == 0x16)
         cout << "PASS!" << endl;
     else
         cout << "FAILED - Day Incorrect." << endl;
 
     cout << "Checking Part 2 - Month..." << endl;
-    if(day2 == 0x0B)
+    if(month2 == 0x0B)
         cout << "PASS!" << endl;
     else
         cout << "FAILED - Month Incorrect." << endl;
 
     cout << "Checking Part 2 - Year..." << endl;
-    if(day2 == 0x07CD)
+    if(year2 == 0x07CD)
         cout << "PASS!" << endl;
     else
         cout << "FAILED - Year Incorrect." << endl;
-
-
-
-
 }
